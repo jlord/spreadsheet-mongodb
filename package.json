@@ -1,0 +1,25 @@
+{
+  "name": "spreadsheet-mongodb",
+  "version": "1.0.0",
+  "description": "Work in Progress!",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlord/spreadsheet-mongodb.git"
+  },
+  "author": "Jessica Lord",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlord/spreadsheet-mongodb/issues"
+  },
+  "homepage": "https://github.com/jlord/spreadsheet-mongodb#readme",
+  "dependencies": {
+    "mongodb": "^2.2.30"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2"
+  }
+}
