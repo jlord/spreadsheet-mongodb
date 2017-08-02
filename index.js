@@ -1,5 +1,5 @@
 var data = require('./data.json')
-var tabletop = require('tabletop') // TODO fetch from spreadsheet
+// var tabletop = require('tabletop') // TODO fetch from spreadsheet
 
 var monodb = require('mongodb').MongoClient
 
@@ -8,6 +8,7 @@ var monodb = require('mongodb').MongoClient
 // node index.js --ssk <KEY> --mdburl <URL> --db <DB> --col <COL>
 
 monodb.connect('mongodb://localhost:27017/vermeer', function (err, db) {
+  if (err) return console.log(err)
   var col = db.collection('visits')
   col.insertMany(bestowIdUpon(data), function (err, resp) {
     if (err) return console.log(err)
