@@ -10,6 +10,7 @@ var mongodb = require('mongodb').MongoClient
 mongodb.connect('mongodb://localhost:27017/vermeer', function (err, db) {
   if (err) return console.log(err)
   var col = db.collection('visits')
+  // TODO drop collection if it's there
   col.insertMany(bestowIdUpon(data), function (err, resp) {
     if (err) return console.log(err)
     console.log('Inserted:', resp.insertedCount)
@@ -21,6 +22,7 @@ function bestowIdUpon (data) {
   data.forEach(function (d, i) {
     // TODO make this BSON and better
     d._id = i + 1
+    // TODO make booleans booleans and numbers numbers
   })
   return data
 }
